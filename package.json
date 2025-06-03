@@ -1,0 +1,46 @@
+{
+  "name": "git-groq",
+  "version": "0.1.0",
+  "description": "Automates git add/commit/push with Groq-generated Conventional Commits",
+  "main": "dist/git-groq",
+  "bin": {
+    "git-groq": "./dist/git-groq"
+  },
+  "scripts": {
+    "build": "bun build bin/git-groq.ts --outfile dist/git-groq --compile",
+    "start": "bun run dist/git-groq",
+    "dev": "bun run bin/git-groq.ts",
+    "clean": "rm -rf dist",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "git",
+    "commit",
+    "ai",
+    "groq",
+    "conventional-commits",
+    "automation",
+    "cli"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "engines": {
+    "bun": ">=1.1.0",
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/git-groq.git"
+  },
+  "homepage": "https://github.com/yourusername/git-groq#readme",
+  "bugs": {
+    "url": "https://github.com/yourusername/git-groq/issues"
+  },
+  "files": [
+    "dist/",
+    "bin/",
+    "README.md",
+    "LICENSE"
+  ]
+}
